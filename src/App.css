@@ -1,0 +1,50 @@
+.App {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card .badge {
+  font-size: 0.8rem;
+}
+header h1{
+  font-size: 4rem ;
+  padding-top: 3%;
+  font-weight: 700;
+}
+header p{
+  font-size: 1.5rem ;
+  padding-bottom: 3%;
+}
+
+.card-eff:hover{
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.card-eff{
+  padding-bottom: 2%;
+}
+
+.btn-eff:hover{
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.img-eff:hover{
+  transform: scale(1.02);
+  cursor: pointer;
+}
+/* .list-eff{
+  flex-direction: row;
+  gap: 15%;
+}
+.form-eff{
+  display: flex;
+  padding-right: 5%;
+}
+.inp-eff{
+  width: auto;
+  height: auto;
+  
+} */

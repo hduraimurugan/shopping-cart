@@ -1,0 +1,3 @@
+This website is a clone for amazon.in, Zamazon.in you can add the products to the cart and view the added items in the cart...
+
+Live link: 
