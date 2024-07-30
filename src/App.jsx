@@ -169,7 +169,7 @@ const App = () => {
         </Modal.Body>
 
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseCart}>
+          <Button variant="success" onClick={handleCloseCart}>
             Close
           </Button>
         </Modal.Footer>
