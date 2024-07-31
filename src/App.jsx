@@ -11,7 +11,7 @@ const App = () => {
     {
       id: 1,
       name: 'Redmi A3 (Olive Green, 6GB RAM, 128GB Storage)',
-      price: '₹8,999',
+      price: 8999,
       oldPrice: '₹11,999',
       description: 'Premium Halo Design | 90Hz Display | Powerful 4G G36 Processor',
       rating: 4,
@@ -20,7 +20,7 @@ const App = () => {
     {
       id: 2,
       name: 'OnePlus Nord CE4 Lite 5G (Mega Blue, 8GB RAM, 128GB Storage)',
-      price: '₹19,999',
+      price: 19999,
       oldPrice: '₹20,999',
       description: '(Mega Blue, 8GB RAM, 128GB Storage)',
       rating: 4,
@@ -29,7 +29,7 @@ const App = () => {
     {
       id: 3,
       name: 'Samsung Galaxy M35 5G (DayBreak Blue,6GB RAM,128GB Storage)',
-      price: '₹33,300',
+      price: 33300,
       oldPrice: '₹50,990',
       description: 'Corning Gorilla Glass Victus+ | Vapour Cooling Chamber | 6000mAh Battery | 120Hz Super AMOLED Display| without Charger',
       rating: 3.5,
@@ -37,7 +37,7 @@ const App = () => {
     },
     {
       id: 4, name: 'Apple iPad (10th generation)',
-      price: '₹32,900',
+      price: 32900,
       description: 'with A14 Bionic chip, 27.69 cm (10.9″) Liquid Retina display, 64GB, Wi-Fi 6, 12MP front/12MP back camera, Touch ID, all-day battery life – Blue',
       img: "https://m.media-amazon.com/images/I/31qx8K0wm+L._MCnd_AC_.jpg",
       rating: 5
@@ -45,7 +45,7 @@ const App = () => {
     {
       id: 5,
       name: 'ASUS Vivobook Go 15 (2023)',
-      price: '₹47,990',
+      price: 47990,
       description: 'AMD Ryzen 5 7520U, 15.6" (39.62 cm) FHD, Thin & Light Laptop (16GB/512GB SSD/Windows 11/Office 2021/Alexa Built-in/Mixed Black/1.63 kg)',
       rating: 4,
       img: "https://m.media-amazon.com/images/I/4131DuYd2ML._MCnd_AC_.jpg"
@@ -53,7 +53,7 @@ const App = () => {
     {
       id: 6,
       name: 'HP Laptop 15s',
-      price: '₹42,085',
+      price: 42085,
       oldPrice: '₹62,753.20',
       description: 'AMD Ryzen 5 5500U, 15.6-inch (39.6 cm), FHD, 16GB DDR4, 512GB SSD, AMD Radeon graphics, 720p HD camera, Backlit KB, Thin & Light (Win 11, MSO 2021, Silver, 1.69 kg)',
       rating: 4,
@@ -62,7 +62,7 @@ const App = () => {
     {
       id: 7,
       name: 'ASUS Vivobook Go 14 (2023)',
-      price: '₹33,300',
+      price: 33300,
       oldPrice: '₹50,990',
       description: 'AMD Ryzen 3 7320U, 14-inch (35.56 cm) FHD, Thin & Light Laptop (8GB/512GB SSD/Windows 11/Office 2021/Alexa Built-in/Grey Green/1.38 kg)',
       rating: 3.5,
@@ -70,7 +70,7 @@ const App = () => {
     },
     {
       id: 8, name: 'GIGABYTE Nvidia GeForce ® GTX 1650 D6 pci_e_x16',
-      price: '₹32,900',
+      price: 32900,
       description: 'WINDFORCE OC 4GD Graphics Card with Integrated 4GB GDDR6 Memory (GV-N1656WF2OC-4GD)',
       img: "https://m.media-amazon.com/images/I/71qxEY6PtiL._SX679_.jpg",
       rating: 5
@@ -78,7 +78,7 @@ const App = () => {
     {
       id: 9,
       name: 'Nikon D850 45.7MP Digital SLR Camera (Black)',
-      price: '₹2,49,990',
+      price: 249990,
       oldPrice: '₹2,71,950',
       description: 'with AF-S Nikkor 24-120mm F/4G ED VR Lens and 64GB Memory Card',
       rating: 4,
@@ -87,7 +87,7 @@ const App = () => {
     {
       id: 10,
       name: 'Canon EOS R6 Body Digital Camera [Black]',
-      price: '₹2,11,300',
+      price: 211300,
       oldPrice: '₹2,71,950',
       description: 'Approx. 20.1MP full-frame CMOS sensor + 4K video | Canon Digital Camera EOS R6(IN)BODY With Mount Adapter EF-EOS R & Canon 3 Way Bag',
       rating: 4,
@@ -95,7 +95,7 @@ const App = () => {
     },
     {
       id: 11, name: 'GIGABYTE Nvidia GeForce ® GTX 1650 D6 pci_e_x16',
-      price: '₹32,900',
+      price: 32900,
       description: 'WINDFORCE OC 4GD Graphics Card with Integrated 4GB GDDR6 Memory (GV-N1656WF2OC-4GD)',
       img: "https://m.media-amazon.com/images/I/71qxEY6PtiL._SX679_.jpg",
       rating: 5
@@ -103,7 +103,7 @@ const App = () => {
     {
       id: 12,
       name: 'ASUS Vivobook Go 14 (2023)',
-      price: '₹33,300',
+      price: 33300,
       oldPrice: '₹50,990',
       description: 'AMD Ryzen 3 7320U, 14-inch (35.56 cm) FHD, Thin & Light Laptop (8GB/512GB SSD/Windows 11/Office 2021/Alexa Built-in/Grey Green/1.38 kg)',
       rating: 3.5,
@@ -113,17 +113,20 @@ const App = () => {
 
   const [cartItems, setCartItems] = useState([]);
   const [showCart, setShowCart] = useState(false);
+  const [total, setTotal] = useState(0);
 
   const handleAddToCart = (product) => {
     if (cartItems.some(item => item.id === product.id)) {
       setCartItems(cartItems.filter(item => item.id !== product.id));
     } else {
       setCartItems([...cartItems, product]);
+      setTotal(total + product.price)
     }
   };
 
   const handleRemoveFromCart = (product) => {
     setCartItems(cartItems.filter(item => item.id !== product.id));
+    setTotal(total - product.price)
   };
 
   const handleShowCart = () => setShowCart(true);
@@ -165,7 +168,7 @@ const App = () => {
         </Modal.Header>
 
         <Modal.Body>
-          <Cart cartItems={cartItems} onRemoveFromCart={handleRemoveFromCart} />
+          <Cart cartItems={cartItems} total={total} onRemoveFromCart={handleRemoveFromCart} />
         </Modal.Body>
 
         <Modal.Footer>

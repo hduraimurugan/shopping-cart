@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Product = ({ product, onAddToCart, inCart }) => {
+
   return (
     <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
 
@@ -19,7 +20,7 @@ const Product = ({ product, onAddToCart, inCart }) => {
 
           <div className="card-text">
             {product.oldPrice && <span className="text-muted text-decoration-line-through">{product.oldPrice}</span>}
-            <span className="fw-bold"> {product.price}</span>
+            <span className="fw-bold"> ₹{(product.price).toLocaleString('en-IN')}</span>
           </div>
 
           {product.rating && <div className="card-text">{"★".repeat(product.rating)}</div>}
