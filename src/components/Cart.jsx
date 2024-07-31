@@ -12,7 +12,7 @@ const Cart = ({ cartItems, onRemoveFromCart, total}) => {
         <ul className="list-group">
           {cartItems.map(item => (
             <li key={item.id} className="list-group-item d-flex justify-content-between align-items-center">
-              {item.name} : {(item.price).toLocaleString('en-IN')}
+              {item.name} : ₹{(item.price).toLocaleString('en-IN')}
               <button className="btn btn-outline-danger btn-sm" onClick={() => onRemoveFromCart(item)}>Remove</button>
             </li>
           ))}

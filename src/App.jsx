@@ -118,6 +118,7 @@ const App = () => {
   const handleAddToCart = (product) => {
     if (cartItems.some(item => item.id === product.id)) {
       setCartItems(cartItems.filter(item => item.id !== product.id));
+      setTotal(total - product.price)
     } else {
       setCartItems([...cartItems, product]);
       setTotal(total + product.price)
